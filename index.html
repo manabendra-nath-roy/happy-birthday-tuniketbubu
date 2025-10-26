@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Satabdi 💖</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Poppins',sans-serif;background: linear-gradient(to right, #fbc2eb, #a6c1ee);color:#333;overflow-x:hidden;}
+
+header{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    position:relative;
+    color:white;
+    overflow:hidden;
+}
+
+header::after{
+    content:'';
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.4);
+}
+
+header h1{font-family:'Great Vibes', cursive;font-size:4em;z-index:1;}
+header h2{font-size:1.8em;margin-top:10px;z-index:1;}
+.click-to-play{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    background:#ff6b6b;
+    color:white;
+    font-size:1em;
+    border-radius:30px;
+    cursor:pointer;
+    z-index:1;
+    position:relative;
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color:#ff6b6b;
+    transform: rotate(45deg);
+    animation: float 6s linear infinite;
+    border-radius:5px 5px 0 0;
+}
+.heart::before, .heart::after{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background-color:#ff6b6b;
+    border-radius:50%;
+}
+.heart::before{top:-10px;left:0;}
+.heart::after{left:-10px;top:0;}
+
+@keyframes float{
+    0%{transform: translateY(0) rotate(0deg);}
+    100%{transform: translateY(-100vh) rotate(360deg);}
+}
+
+/* Sections */
+section{padding:60px 20px;text-align:center;position:relative;opacity:0;transform:translateY(50px);transition:all 1s ease;}
+section.visible{opacity:1;transform:translateY(0);}
+.timeline{max-width:900px;margin:auto;position:relative;}
+.timeline::after{content:'';position:absolute;width:6px;background-color:#ff6b6b;top:0;bottom:0;left:50%;margin-left:-3px;}
+.timeline-item{padding:20px 40px;position:relative;width:50%;}
+.timeline-item:nth-child(odd){left:0;}
+.timeline-item:nth-child(even){left:50%;}
+.timeline-item::after{content:'';position:absolute;width:25px;height:25px;right:-13px;background-color:#ff6b6b;border:4px solid white;top:15px;border-radius:50%;z-index:1;}
+.timeline-item:nth-child(even)::after{left:-13px;}
+.timeline-item h3{font-family:'Great Vibes', cursive;font-size:1.8em;margin-bottom:10px;}
+.timeline-item p{font-size:1em;margin-bottom:10px;}
+
+/* Gallery */
+.gallery{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+.gallery img{width:250px;height:250px;object-fit:cover;border-radius:15px;cursor:pointer;transition:transform 0.3s;}
+.gallery img:hover{transform:scale(1.05);}
+
+/* Birthday message */
+.birthday-message{font-size:1.5em;margin-top:20px;}
+
+/* Confetti */
+.confetti{position:fixed;width:100%;height:100%;pointer-events:none;top:0;left:0;z-index:9999;}
+
+/* Instagram story slider */
+.story-container{max-width:500px;margin:auto;position:relative;overflow:hidden;border-radius:20px;box-shadow:0 5px 15px rgba(0,0,0,0.2);}
+.story-slide{display:flex;transition:transform 0.5s ease;}
+.story-slide img{width:100%;height:350px;object-fit:cover;flex-shrink:0;}
+.story-nav{position:absolute;top:50%;width:100%;display:flex;justify-content:space-between;transform:translateY(-50%);}
+.story-nav button{background:rgba(255,255,255,0.7);border:none;padding:10px 15px;border-radius:50%;cursor:pointer;font-size:1.2em;}
+
+/* Footer */
+footer{padding:20px;text-align:center;background:#ff6b6b;color:white;font-weight:600;}
+
+@media screen and (max-width:768px){
+    .timeline-item{width:100%;padding-left:70px;padding-right:25px;margin-bottom:30px;}
+    .timeline-item:nth-child(even){left:0;}
+    .timeline::after{left:30px;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Happy Birthday Tuniket 💖</h1>
+<h2>My beloved Bubu</h2>
+<button class="click-to-play" onclick="playMusic()">Click here to Play 🎶</button>
+<audio id="birthday-audio" src="your-audio.mp3"></audio>
+<div id="hearts"></div>
+</header>
+
+<section>
+<h2>Our Beautiful Journey</h2>
+<div class="timeline">
+<div class="timeline-item">
+    <h3>First Meeting Online</h3>
+    <p>
+        We first met on Facebook, and after many chats and a little persistence,<br>
+        I finally convinced my beautiful Tuniket to meet me in person.<br>
+        Little did I know, that day would change my whole world.
+    </p>
+</div>
+<div class="timeline-item">
+    <h3>First Meet in Person</h3>
+    <p>
+        On December 16th, 2023, at Coochbehar Rashmela, we finally met in person.<br>
+        The moment I saw you, it felt like we had known each other in another life.<br>
+        That day was so special— Magic happened.
+    </p>
+</div>
+<div class="timeline-item">
+    <h3>Memorable Places</h3>
+    <p>
+        We laughed, explored, and made beautiful memories together at Rongo Pahar, Jolpesh Mela, and Coochbehar Boiragi Dighi.<br>
+        Every moment with you felt magical, and these days will forever hold a special place in my heart.
+    </p>
+</div>
+</div>
+</section>
+
+<section>
+    <h2>Your Passions</h2>
+    <p>
+        To my dearest Tuniket,<br>
+        You care for others with all your heart as an amazing nurse,<br>
+        You mesmerize everyone with your magical singing,<br>
+        You light up Instagram with your charm and creativity,<br>
+        And through it all, you shine as the most beautiful Bubu in my life.
+    </p>
+</section>
+
+<section>
+<h2>Gallery of Memories</h2>
+<div class="gallery">
+<img src="photo1.jpg" alt="Memory 1">
+<img src="photo2.jpg" alt="Memory 2">
+<img src="photo3.jpg" alt="Memory 3">
+</div>
+</section>
+
+<section>
+<h2>Tuniket: My Inspiration & Joy 💕</h2>
+<div class="story-container">
+<div class="story-slide" id="story-slide">
+<img src="story1.jpg" alt="Story 1">
+<img src="story2.jpg" alt="Story 2">
+<img src="story3.jpg" alt="Story 3">
+</div>
+<div class="story-nav">
+<button onclick="prevStory()">&#10094;</button>
+<button onclick="nextStory()">&#10095;</button>
+</div>
+</div>
+</section>
+
+<section>
+<h2>My Birthday Wish for You</h2>
+<p class="birthday-message">You are my everything — my love, my happiness, my inspiration. I hope this birthday is as amazing as you are. I love you endlessly, Bubu 💖</p>
+</section>
+
+<!-- Surprise Pop-up -->
+<div id="popup" style="position: fixed;top:50%; left:50%;transform: translate(-50%, -50%) scale(0);background: rgba(255,255,255,0.95);padding: 40px;border-radius: 20px;text-align: center;z-index: 10000;box-shadow: 0 5px 20px rgba(0,0,0,0.3);transition: transform 0.5s ease;">
+    <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.5em; color:#ff6b6b;">Bubu 💖</h2>
+    <p style="font-size:1.2em; margin:20px 0;">I love you more than words can say! <br> Happy Birthday, my beautiful Tuniket!</p>
+    <button onclick="closePopup()" style="padding:10px 20px; border:none; background:#ff6b6b; color:white; border-radius:30px; cursor:pointer; font-size:1em;">❤️ Close ❤️</button>
+    <div id="popup-hearts"></div>
+</div>
+
+<div class="confetti" id="confetti"></div>
+
+<footer>
+Made with ❤️ for Tuniket
+</footer>
+
+<script>
+// Play music
+function playMusic(){document.getElementById('birthday-audio').play();}
+
+// Floating hearts in header
+const heartsContainer = document.getElementById('hearts');
+for(let i=0;i<30;i++){
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random()*100+'%';
+    heart.style.animationDuration = (5+Math.random()*5)+'s';
+    heart.style.animationDelay = Math.random()*5+'s';
+    heartsContainer.appendChild(heart);
+}
+
+// Confetti effect
+const confettiContainer = document.getElementById('confetti');
+for(let i=0;i<100;i++){
+    const confetti = document.createElement('div');
+    confetti.style.position='absolute';
+    confetti.style.width='10px';
+    confetti.style.height='10px';
+    confetti.style.backgroundColor=`hsl(${Math.random()*360},100%,50%)`;
+    confetti.style.top=`${Math.random()*100}%`;
+    confetti.style.left=`${Math.random()*100}%`;
+    confetti.style.borderRadius='50%';
+    confetti.style.animation=`fall ${3+Math.random()*2}s linear infinite`;
+    confettiContainer.appendChild(confetti);
+}
+const style=document.createElement('style');
+style.innerHTML=`@keyframes fall{0%{transform:translateY(0) rotate(0deg);}100%{transform:translateY(100vh) rotate(360deg);}}`;
+document.head.appendChild(style);
+
+// Fade-in sections
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + window.innerHeight*0.8;
+    sections.forEach(sec => { if(sec.offsetTop < scrollY){ sec.classList.add('visible'); } });
+});
+
+// Instagram-style stories
+let currentStory=0;
+const stories=document.getElementById('story-slide');
+function nextStory(){if(currentStory < stories.children.length-1){currentStory++; stories.style.transform=`translateX(-${currentStory*100}%)`; }}
+function prevStory(){if(currentStory > 0){currentStory--; stories.style.transform=`translateX(-${currentStory*100}%)`; }}
+
+// Surprise Pop-up logic
+const popup = document.getElementById('popup');
+const popupHearts = document.getElementById('popup-hearts');
+function createPopupHearts(){for(let i=0;i<30;i++){const heart = document.createElement('div');heart.classList.add('heart');heart.style.left=Math.random()*80+'%';heart.style.top=Math.random()*80+'%';heart.style.animationDuration=(3+Math.random()*3)+'s';popupHearts.appendChild(heart);}}
+window.addEventListener('scroll', () => { if((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50){popup.style.transform = "translate(-50%, -50%) scale(1)"; createPopupHearts();} });
+function closePopup(){popup.style.transform = "translate(-50%, -50%) scale(0)"; popupHearts.innerHTML='';}
+</script>
+
+</body>
+</html>
